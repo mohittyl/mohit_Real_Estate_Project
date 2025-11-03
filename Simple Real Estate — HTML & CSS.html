@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simple Real Estate — HTML &amp; CSS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Simple Real Estate — HTML &amp; CSS_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --accent:#ff6b3d;
+    --muted:#6b7280;
+    --bg:#fafaf9;
+    --card:#ffffff;
+    --max-width:1100px;
+    --radius:12px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    color:#111827;
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.4;
+  }
+
+  .wrap{
+    max-width:var(--max-width);
+    margin:36px auto;
+    padding:0 20px 60px;
+  }
+
+  header.hero{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:28px;
+    align-items:center;
+    margin-bottom:28px;
+  }
+  .hero-left h1{
+    margin:0 0 12px;
+    font-size:clamp(22px,3.2vw,36px);
+    line-height:1.05;
+  }
+  .hero-left p{margin:0 0 18px;color:var(--muted)}
+
+  .search-card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.06);
+  }
+  .search-row{
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+  .search-row input[type="text"],
+  .search-row select{
+    flex:1;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #e6e7eb;
+    font-size:14px;
+    outline:none;
+    background:#fff;
+  }
+  .search-row button{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .hero-cta{
+    margin-top:12px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  .section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:28px 0 12px;
+  }
+  .listings-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    display:flex;
+    flex-direction:column;
+  }
+  .card .media{
+    height:180px;
+    background-size:cover;
+    background-position:center;
+  }
+  .card .body{
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .price{
+    font-weight:700;
+    font-size:18px;
+  }
+  .meta{color:var(--muted); font-size:13px}
+  .card .actions{
+    margin-top:auto;
+    padding:12px 14px;
+    border-top:1px solid #f2f2f3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .btn-outline{
+    padding:8px 12px;
+    border-radius:8px;
+    border:1px solid #e6e7eb;
+    background:#fff;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .badge{
+    background:#0ea5a4;
+    color:#fff;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+  }
+
+  footer{
+    margin-top:34px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr}
+    .listings-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:600px){
+    .listings-grid{grid-template-columns:1fr}
+    .hero-left h1{font-size:22px}
+    .hero-left p{font-size:14px}
+  }
+
+  .muted{color:var(--muted)}
+  .row{display:flex;gap:8px;align-items:center}
+  .pill{background:#fff;padding:6px 10px;border-radius:999px;border:1px solid #eee;font-weight:600}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-left">
+        <h1>Find your next home</h1>
+        <p>Browse featured rentals and properties for sale. No signups — just a clean static demo using HTML &amp; CSS.</p>
+
+        <div class="search-card" aria-label="search">
+          <form class="search-row" onsubmit="return false;">
+      
+            <input type="text" placeholder="Search city or neighborhood" aria-label="search-text">
+            <select aria-label="type">
+              <option>Any type</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Studio</option>
+            </select>
+            <button type="submit">Search</button>
+          </form>
+          <div class="hero-cta muted">Tip: this is static — use a backend or JS to make it interactive.</div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="padding:14px;">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="width:64px;height:64px;border-radius:10px;background-image:url(&#39;https://images.unsplash.com/photo-1560184897-eb7ff6b1a8e9?auto=format&amp;fit=crop&amp;w=200&amp;q=60&#39;);background-size:cover;background-position:center"></div>
+            <div>
+              <div style="font-weight:700">Featured agent</div>
+              <div class="muted" style="font-size:13px">Sarah Reeves • (555) 123-456</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Office hours: Mon-Fri, 9am-6pm
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <section>
+      <div class="section-title">
+        <h2 style="margin:0">Featured Listings</h2>
+        <div class="row">
+          <div class="pill">Sort: Newest</div>
+        </div>
+      </div>
+
+      <div class="listings-grid">
+
+        <article class="card" aria-label="Listing 1">
+          <div class="media" style="background-image:url(&#39;https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&amp;fit=crop&amp;w=1000&amp;q=60&#39;)"></div>
+          <div class="body">
+            <div class="price">$1,250 / mo</div>
+            <div class="meta">2 bed • 1 bath • 900 sqft</div>
+            <div class="meta">Downtown • Available Oct 1</div>
+          </div>
+          <div class="actions">
+            <div class="badge">New</div>
+            <button class="btn-outline" aria-label="view details">View</button>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Listing 2">
+          <div class="media" style="background-image:url(&#39;https://images.unsplash.com/photo-1600607689073-0a9f1f1f9f6a?auto=format&amp;fit=crop&amp;w=1000&amp;q=60&#39;)"></div>
+          <div class="body">
+            <div class="price">$480,000</div>
+            <div class="meta">3 bed • 2 bath • 1,650 sqft</div>
+            <div class="meta">Suburban • 0.25 acre</div>
+          </div>
+          <div class="actions">
+            <div class="muted" style="font-size:13px">For sale</div>
+            <button class="btn-outline">Contact</button>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Listing 3">
+          <div class="media" style="background-image:url(&#39;https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=1000&amp;q=60&#39;)"></div>
+          <div class="body">
+            <div class="price">$2,100 / mo</div>
+            <div class="meta">3 bed • 2.5 bath • 1,250 sqft</div>
+            <div class="meta">Near parks • Pet friendly</div>
+          </div>
+          <div class="actions">
+            <div class="muted" style="font-size:13px">Rental</div>
+            <button class="btn-outline">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Simple Real Estate</strong><br><span class="muted">Static demo — HTML &amp; CSS only</span>
+      </div>
+      <div class="muted">Contact: info@example.com</div>
+    </footer>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
