@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        nav a{
+            width: 100%;
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            font-size: 30px;
+            margin: bottom 50px; ;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 80px;
+            background: url(https://accessnsite.com/wp-content/uploads/2020/05/page-heading-background-contact-us.jpg) center/cover no-repeat;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .left-content {
+            width: 45%;
+            margin-top: 100px;
+        }
+
+        .left-content h1 {
+            font-size: 60px;
+            font-weight: 300;
+            color: green;
+        }
+
+        .left-content p {
+            margin-top: 24px;
+            font-size: 29px;
+            width: 90%;
+            line-height: 1.6;
+            color: white;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .form-container {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 40px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .checkbox {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .checkbox input {
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox a {
+            color: #5a2ca0;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 20px;
+            font-size: 20px;
+            background: #ddd;
+            color: #000;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+            <a href="#">Home</a>
+            <a href="./HomeInterior.html">Home Interior</a>
+            <a href="./AboutUs.html">About Us</a>
+            <a href="./Residential.html">Residential</a>
+            <a href="./Blog.html">Blog</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    <section class="contact-section">
+        <div class="left-content">
+            <h1>Let's Talk</h1>
+            <p>
+                We will help you find the best data solution for you.
+                Write to us without obligation and we will contact you
+                as soon as possible.
+            </p>
+        </div>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="Company" required>
+                <select required>
+                    <option>Country</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+                <input type="tel" placeholder="Phone(Optional)" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Leave a message"></textarea>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    I accept the <a href="#">Privacy Policy</a>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    I agree to recieve informtion about Accumin products and services
+                </label>
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

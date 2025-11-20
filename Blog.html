@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #fff;
+        }
+        nav a{
+            width: 100%;
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* background-color: white; */
+        }
+
+        body {
+            background: #0d0d0d;
+            color: white;
+        }
+
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        .header p {
+            color: #bfbfbf;
+            margin-top: 10px;
+        }
+
+        /* FEATURED CARD */
+        .featured-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .featured-card {
+            position: relative;
+        }
+
+        .featured-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .featured-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        .featured-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .featured-content a {
+            color: #2aff9a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .grid-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card .content {
+            padding: 15px;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #21ff95;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+            <a href="#">Home</a>
+            <a href="./HomeInterior.html">Home Interior</a>
+            <a href="./AboutUs.html">About Us</a>
+            <a href="./Residential.html">Residential</a>
+            <a href="./Blog.html">Blog</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    <header class="header">
+        <h1>The Perchwell Blog</h1>
+        <p>Insights for modern real estate professionals</p>
+    </header>
+
+    <section class="featured-section">
+        <div class="featured-card">
+            <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769" alt="">
+            <div class="featured-content">
+                <h3>Introducing AI Scribe: Write Listing Descriptions in Seconds</h3>
+                <p>AI-powered features now help you generate real estate listings faster.</p>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="">
+            <div class="content">
+                <h4>Baldwin REALTORS® Selects Perchwell</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1557683316-973673baf926" alt="">
+            <div class="content">
+                <h4>Perchwell Tops Enterprise Scale</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5" alt="">
+            <div class="content">
+                <h4>Amidst Real Estate Transformation</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9" alt="">
+            <div class="content">
+                <h4>Brokerages Start 2024 Strong</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1534081333815-ae5019106622" alt="">
+            <div class="content">
+                <h4>Making Sense of Real Estate Data</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1527430253228-e93688616381" alt="">
+            <div class="content">
+                <h4>Perchwell Raises $15M Series A</h4>
+                <a href="#">Read Story →</a>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

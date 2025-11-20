@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            color: green;
+            font-size: 30px;
+            transform: scale(1);
+            transition: all 0.5s ease-in-out;
+
+            
+        }
+
+        nav a:hover {
+            color: goldenrod;
+            transform: scale(1.2);
+        }
+
+        .hero {
+            height: 450px;
+            background: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyaminmellish-106399.jpg&fm=jpg') center/cover no-repeat;
+            position: relative;
+            background-size: cover;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(28, 28, 94, 0.5);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 100px;
+            font-weight: 300;
+        }
+
+        .hero-content span {
+            font-weight: 600;
+        }
+
+        .search-box {
+            position: absolute;
+            left: 70%;
+            bottom: -14%;
+            transform: translateX(-100%);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box select,
+        .search-box input {
+            padding: 7px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+
+        }
+
+        .search-btn {
+            background: #6dc44a;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #59a438;
+        }
+
+        .properties {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 100px auto;
+            width: 90%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Homes</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="./HomeInterior.html">Home Interior</a>
+            <a href="./AboutUs.html">About Us</a>
+            <a href="./Residential.html">Residential</a>
+            <a href="./Blog.html">Blog</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find your next <br> <span>dream home</span></h1>
+        </div>
+
+        <div class="search-box">
+            <div class="location">
+                
+                <select>
+                    <option>London</option>
+                    <option>New York</option>
+                    <option>Paris</option>
+                </select>
+            </div>
+
+            <select>
+                <option>House</option>
+                <option>Flat</option>
+                <option>Villa</option>
+            </select>
+
+            <input type="range" min="50k" max="150k">
+
+            <select>
+                <option>Bedrooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+
+            <select>
+                <option>Bathrooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+
+            <button class="search-btn">Search</button>
+        </div>
+    </section>
+
+    <section class="properties">
+        <div class="card">
+            <img src="https://wallpapers.com/images/featured/beautiful-house-background-x1yu28g8twzle26l.jpg"
+                alt="property">
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRi6noH0q45GOKj0kA0THBoMY8bbLCLKo9HA&s"
+                alt="property">
+        </div>
+
+        <div class="card">
+            <img src="https://www.openhousedesigns.com/wp-content/uploads/2022/06/C1-1024x576.jpg" alt="property">
+        </div>
+
+
+    </section>
+</body>
+
+</html>

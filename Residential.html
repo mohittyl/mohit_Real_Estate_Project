@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential</title>
+    <style>
+        *{
+            margin: 0;
+            background: #f7f7f7;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        nav a{
+            width: 100%;
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            font-size: 30px;
+        }
+        .project-section{
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .heading{
+            font-size: 30px;
+            color: navy;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+        .project-container{
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .project-card{
+            width: 320px;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .project-card img{
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+        .project-info{
+            padding: 15px;
+            text-align: left;
+        }
+        .project-info h3{
+            font-size: 20px;
+            color: #555;
+            margin: 0;
+        }
+        .project-info .name{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .project-info .location{
+            font-size: 20px;
+            color: #222;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+            <a href="#">Home</a>
+            <a href="./HomeInterior.html">Home Interior</a>
+            <a href="./AboutUs.html">About Us</a>
+            <a href="./Residential.html">Residential</a>
+            <a href="./Blog.html">Blog</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    <section class="project-section">
+        <h2 class="heading">OUR PROJECTS</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="https://riseinfraventures.com/media/product/265041430_signature-global-cloverdale-spr-gallery-2.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Signature Global</h3>
+                    <p class="name">Cloverdale SPR</p>
+                    <p class="location">Sector 71,Gurugram</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://100acress-media-bucket.s3.ap-south-1.amazonaws.com/100acre/project/vyyiwuqqcdcvibuxaric" alt="Project 2">
+                <div class="project-info">
+                    <h3>Signature Global</h3>
+                    <p class="name">Twin Tower DXP</p>
+                    <p class="location">Sector 84, Gurugram</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5poc2w7xNH4NTmJb8wSQYVdq08cxR9C5Lu7Vs4O6rx0au7-KBu9AZsIyROBv8L7ZCer4&usqp=CAU" alt="Project 3">
+                <div class="project-info">
+                    <h3>Signature Global</h3>
+                    <p class="name">Titanium SPR</p>
+                    <p class="location">Sector 71,Gurugram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
